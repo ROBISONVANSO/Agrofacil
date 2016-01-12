@@ -2,9 +2,10 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>VRaptor Blank Project</title>
+<title>Agrofacil</title>
 </head>
 <body>
+	<h1>Projeto de Vida</h1>
 	It works!! ${variable} ${linkTo[IndexController].index}
 </body>
 </html>
