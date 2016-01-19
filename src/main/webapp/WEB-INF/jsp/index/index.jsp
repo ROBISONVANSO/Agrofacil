@@ -7,5 +7,6 @@
 <body>
 	<h1>Projeto de Vida</h1>
 	1 It works!! ${variable} ${linkTo[IndexController].index}
+	222
 </body>
 </html>
