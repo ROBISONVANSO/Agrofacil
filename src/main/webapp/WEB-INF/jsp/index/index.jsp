@@ -6,6 +6,6 @@
 </head>
 <body>
 	<h1>Projeto de Vida</h1>
-	It works!! ${variable} ${linkTo[IndexController].index}
+	1 It works!! ${variable} ${linkTo[IndexController].index}
 </body>
 </html>
