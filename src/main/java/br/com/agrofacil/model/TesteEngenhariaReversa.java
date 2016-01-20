@@ -1,12 +1,20 @@
 package br.com.agrofacil.model;
 
 import java.io.Serializable;
-import javax.persistence.*;
 import java.math.BigDecimal;
 import java.sql.Time;
 import java.util.Calendar;
 import java.util.Date;
-import java.sql.Timestamp;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
+import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 
 /**
@@ -14,9 +22,9 @@ import java.sql.Timestamp;
  * 
  */
 @Entity
-@Table(name="teste_engenaria_reversa")
-//@NamedQuery(name="TesteEngenariaReversa.findAll", query="SELECT t FROM TesteEngenariaReversa t")
-public class TesteEngenariaReversa implements Serializable {
+@Table(name="teste_engenharia_revesa")
+//@NamedQuery(name="TesteEngenhariaReversa.findAll", query="SELECT t FROM TesteEngenariaReversa t")
+public class TesteEngenhariaReversa implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
@@ -30,7 +38,7 @@ public class TesteEngenariaReversa implements Serializable {
 
 	@Column(name="teste_char_10", length=10)
 	private String testeChar10;
-
+	
 	@Column(name="teste_char_2", length=2)
 	private String testeChar2;
 
@@ -51,7 +59,7 @@ public class TesteEngenariaReversa implements Serializable {
 	@Column(name="teste_timestamp")
 	private Calendar testeTimestamp;
 
-	public TesteEngenariaReversa() {
+	public TesteEngenhariaReversa() {
 	}
 
 	public Integer getTesteId() {
