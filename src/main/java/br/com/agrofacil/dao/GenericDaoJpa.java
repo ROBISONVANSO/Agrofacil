@@ -18,7 +18,7 @@ import br.com.agrofacil.common.GenericDao;
 //import javax.jms.ObjectMessage;
 
 public class GenericDaoJpa<T> implements GenericDao<T> {
-
+//*
     @Resource
     private MessageDrivenContext mdc;
     
