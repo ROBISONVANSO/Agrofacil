@@ -1,4 +1,3 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -8,5 +7,8 @@
 	<h1>Projeto de Vida</h1>
 	1 It works!! ${variable} ${linkTo[IndexController].index}
 	222
+	
+	<h4><a href="testeAplicacao">Pagina de teste</a></h4>
+	<h4><a href="pais">País</a></h4>
 </body>
 </html>
