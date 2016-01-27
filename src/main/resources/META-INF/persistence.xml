@@ -3,7 +3,6 @@
 	xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
 	<persistence-unit name="agrofacilPU">
-		<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
 		<properties>
 			<!-- Properties Hibernate -->
 			<property name="hibernate.hbm2ddl.auto" value="create" />
@@ -18,10 +17,9 @@
 
 			<!-- Hibernate parameters Conexao com o BD -->
 			<property name="hibernate.connection.driver_class" value="org.postgresql.Driver" />
-			<property name="hibernate.connection.url"
-				value="jdbc:postgresql://localhost:5432/agrofacilBd" />
+			<property name="hibernate.connection.url" value="jdbc:postgresql://localhost:5432/agrofacilBd" />
 			<property name="hibernate.connection.username" value="postgres" />
-			<property name="hibernate.connection.password" value="postgres" />
+			<property name="hibernate.connection.password" value="admin" />
 
 			<!-- JPA parameters -->
 			<!-- <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver" 
