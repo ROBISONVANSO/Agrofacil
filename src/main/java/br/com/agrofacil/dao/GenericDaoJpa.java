@@ -7,22 +7,21 @@ import javax.ejb.MessageDrivenContext;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
-
-import antlr.debug.MessageEvent;
-import antlr.debug.MessageListener;
-import antlr.debug.TraceEvent;
-import br.com.agrofacil.common.GenericDao;
+//import javax.ejb.MessageDrivenContext;
 //import javax.jms.JMSException;
 //import javax.jms.Message;
 //import javax.jms.MessageListener;
 //import javax.jms.ObjectMessage;
+
+import br.com.agrofacil.common.GenericDao;
+
 
 public class GenericDaoJpa<T> implements GenericDao<T> {
 //*
     @Resource
     private MessageDrivenContext mdc;
     
-    @PersistenceContext(unitName = "CCPR-ejb")
+    @PersistenceContext(unitName = "AgrofacilPU")
     private EntityManager emPostgre;
 
     private Class<T> persistentClass;
@@ -60,22 +59,22 @@ public class GenericDaoJpa<T> implements GenericDao<T> {
         Query query = emPostgre.createQuery(jpqlQuery);
         return query.getResultList();
     }
-/*
-    @Override
-    public void onMessage(Message message) {
-        ObjectMessage msg = null;
-     try {
-          if (message instanceof ObjectMessage) {
-          msg = (ObjectMessage) message;
-              T e = (T) msg.getObject();
-              this.create(e);
-          }
-     } catch (JMSException e) {
-          e.printStackTrace();
-          mdc.setRollbackOnly();
-     } catch (Throwable te) {
-          te.printStackTrace();
-     }    } */
+
+//    @Override
+//    public void onMessage(Message message) {
+//        ObjectMessage msg = null;
+//     try {
+//          if (message instanceof ObjectMessage) {
+//          msg = (ObjectMessage) message;
+//              T e = (T) msg.getObject();
+//              this.create(e);
+//          }
+//     } catch (JMSException e) {
+//          e.printStackTrace();
+//          mdc.setRollbackOnly();
+//     } catch (Throwable te) {
+//          te.printStackTrace();
+//     }    } 
 
 }
 
