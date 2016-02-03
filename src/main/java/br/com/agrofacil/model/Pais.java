@@ -3,6 +3,7 @@ package br.com.agrofacil.model;
 import java.io.Serializable;
 import java.util.Calendar;
 
+import javax.ejb.Stateless;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -15,7 +16,7 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.persistence.UniqueConstraint;
 import javax.validation.constraints.NotNull;
-
+@Stateless
 @Entity
 @Table(name = "ge_pais")
 public class Pais implements Serializable {

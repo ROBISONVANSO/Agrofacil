@@ -2,27 +2,29 @@ package br.com.agrofacil.dao;
 
 import java.lang.reflect.ParameterizedType;
 import java.util.List;
+
 import javax.annotation.Resource;
 import javax.ejb.MessageDrivenContext;
+import javax.ejb.Stateful;
+import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.persistence.PersistenceContextType;
 import javax.persistence.Query;
-//import javax.ejb.MessageDrivenContext;
-//import javax.jms.JMSException;
-//import javax.jms.Message;
-//import javax.jms.MessageListener;
-//import javax.jms.ObjectMessage;
 
 import br.com.agrofacil.common.GenericDao;
 
-
+@Stateless
 public class GenericDaoJpa<T> implements GenericDao<T> {
 //*
     @Resource
     private MessageDrivenContext mdc;
     
-    @PersistenceContext(unitName = "AgrofacilPU")
+    @PersistenceContext
     private EntityManager emPostgre;
+    
+  //EntityManagerFactory factory = Persistence.createEntityManagerFactory("agrofacilPU");
+  //EntityManager manager = factory.createEntityManager();
 
     private Class<T> persistentClass;
 
@@ -33,7 +35,13 @@ public class GenericDaoJpa<T> implements GenericDao<T> {
 
     @Override
     public void create(T entity) {
-        emPostgre.persist(entity);
+    	//try {
+    		emPostgre.persist(entity);	
+		//} catch (Exception e) {
+			//System.out.println(e.getStackTrace().toString()+ "Vanso");
+			//System.out.println(e.getCause().getMessage());
+		//}
+   
     }
 
     @Override

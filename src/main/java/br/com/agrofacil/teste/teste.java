@@ -5,6 +5,7 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
 
+import br.com.agrofacil.dao.PaisDaoJpa;
 import br.com.agrofacil.model.Pais;
 import br.com.agrofacil.model.TesteEngenhariaReversa;
 
@@ -14,28 +15,38 @@ public class teste {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		// comentando o teste
-		EntityManagerFactory factory = Persistence.createEntityManagerFactory("agrofacilPU");
-		EntityManager manager = factory.createEntityManager();
-		EntityTransaction trx = manager.getTransaction();
+		//EntityManagerFactory factory = Persistence.createEntityManagerFactory("agrofacilPU");
+		//EntityManager manager = factory.createEntityManager();
+		//EntityTransaction trx = manager.getTransaction();
 		
-		trx.begin();
+		//trx.begin();
 		Pais pais = new Pais();
-		pais.setPaisCod("01");
-		pais.setPaisNome("BRASIL");
+		pais.setPaisId(1);
+		pais.setPaisCod("1053");
+		pais.setPaisNome("BRASIL-TESTE2");
 		pais.setPaisIsExc(false);
 		
-		manager.persist(pais);
+		PaisDaoJpa paisDaoJpa = new PaisDaoJpa();
+		paisDaoJpa.create(pais);
 		
-		TesteEngenhariaReversa t = new TesteEngenhariaReversa();
+		System.out.println(pais.getPaisId());
+		System.err.println(pais.getPaisCod());
+		System.out.println(pais.getPaisNome());
+		System.out.println(pais.getPaisIsExc());
 	
-		t.setTesteBoolean(true);
-		t.setTesteChar10("aaaaaaaaa");
-		t.setTesteNome("teste 1");
 		
-		manager.persist(t);
+		//manager.persist(pais);
+		
+//		TesteEngenhariaReversa t = new TesteEngenhariaReversa();
+//	
+//		t.setTesteBoolean(true);
+//		t.setTesteChar10("aaaaaaaaa");
+//		t.setTesteNome("teste 1");
+//		
+		//manager.persist(t);
 		
 		
-		trx.commit();
+		//trx.commit();
 
 	}
 
