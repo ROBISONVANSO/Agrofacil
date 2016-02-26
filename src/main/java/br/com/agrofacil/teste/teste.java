@@ -149,7 +149,7 @@ public class teste {
 		trx.begin();
 		int i = 364;
 		int x = 0;  
-		for(x = 365 ; i < x ; i++){
+//		for(x = 365 ; i < x ; i++){
 			Locale locale_brasil = new Locale("pt", "BR"); 
 		      TimeZone tz1 = TimeZone.getTimeZone("GMT");
 		      
@@ -181,7 +181,7 @@ public class teste {
 			
 			
 			manager.persist(pais);
-		}
+//		}
 		
 		TesteAplicacao t = new TesteAplicacao();
 	
