@@ -16,8 +16,6 @@ import javax.persistence.TemporalType;
 import javax.persistence.UniqueConstraint;
 import javax.validation.constraints.NotNull;
 
-import org.hibernate.annotations.Type;
-
 @Entity
 @Table(name = "ge_pais")
 public class Pais implements Serializable {

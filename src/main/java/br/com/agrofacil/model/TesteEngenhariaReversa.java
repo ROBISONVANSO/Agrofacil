@@ -28,8 +28,8 @@ public class TesteEngenhariaReversa implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	@SequenceGenerator(name="SEQ_TESTE_ID2", sequenceName="SEQ_TESTE_ID2", initialValue=1, allocationSize=1)
-	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="SEQ_TESTE_ID2" )
+	@SequenceGenerator(name="SEQ_TESTE_ID", sequenceName="SEQ_TESTE_ID", initialValue=1, allocationSize=1)
+	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="SEQ_TESTE_ID" )
 	@Column(name="teste_id", unique=true, nullable=false)
 	private Integer testeId;
 
